@@ -1,0 +1,7 @@
+apiVersion: estaleiro.io/v1
+kind: Music 
+metadata:
+        namespace: default
+        name: mario 
+spec:
+        music: mario

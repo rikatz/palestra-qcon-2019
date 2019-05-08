@@ -1,0 +1,20 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: musics.estaleiro.io 
+spec:
+  group: estaleiro.io
+  version: v1
+  scope: Namespaced
+  names:
+    plural: musics
+    singular: music
+    kind: Music
+  additionalPrinterColumns:
+  - name: Status 
+    type: string
+    description: A musica está tocando ou já acabou
+    JSONPath: .spec.status
+  - name: Age
+    type: date
+    JSONPath: .metadata.creationTimestamp
